@@ -1,5 +1,5 @@
 # Generate web api
-`
+```
 dotnet new webapi --use-controllers -o TodoApi
 cd TodoApi
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
@@ -7,7 +7,7 @@ dotnet add package Microsoft.EntityFrameworkCore
 dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
 dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-`
+```
 
 # Prepare docker instance for DB:
 
