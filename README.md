@@ -24,3 +24,10 @@ docker run -d --name mssql -e ACCEPT_EULA=Y -e MSSQL_SA_PASSWORD='Something$ecur
     "DefaultConnection": "Data Source=localhost,1433;TrustServerCertificate=true;User ID=sa;Password=Something$ecur3!;"
   }
 ```
+
+# In case the container needs to be removed
+
+1. docker container ls 
+2. docker stop name-of-container
+3. docker container prune
+4. docker rm --volumes name-of-container
