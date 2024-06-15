@@ -17,7 +17,7 @@ dotnet ef database update
 ```
 (if `dotnet ef` doesn't work, try `dotnet tool install --global dotnet-ef`)
 
-Don't forget to delete tables if needed when re-creating the migration. Use the following script:
+Don't forget to delete tables if needed when re-creating the migration. Use the following script (delimiter may either be ; or GO):
 
 ```sql
 USE YOUR_DATABASE_NAME
