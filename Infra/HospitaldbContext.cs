@@ -60,7 +60,7 @@ public partial class HospitaldbContext : DbContext
             entity.ToTable("Prescription_Medicament");
 
             entity.Property(e => e.Dose).IsRequired(false);
-            entity.Property(e => e.Details).HasColumnType("datetime");
+            entity.Property(e => e.Details).HasMaxLength(100);
 
             entity
                 .HasOne(d => d.IdMedicamentNav)
@@ -93,8 +93,8 @@ public partial class HospitaldbContext : DbContext
 
             entity.ToTable("Prescription");
 
-            entity.Property(e => e.Date).HasColumnType("datetime");
-            entity.Property(e => e.DueDate).HasColumnType("datetime");
+            entity.Property(e => e.Date).HasColumnType("datetime2");
+            entity.Property(e => e.DueDate).HasColumnType("datetime2");
 
             entity
                 .HasOne(pr => pr.IdPatientNav)
@@ -116,7 +116,7 @@ public partial class HospitaldbContext : DbContext
 
             entity.Property(e => e.FirstName).HasMaxLength(100);
             entity.Property(e => e.LastName).HasMaxLength(100);
-            entity.Property(e => e.BirthDate).HasColumnType("datetime");
+            entity.Property(e => e.BirthDate).HasColumnType("datetime2");
         });
 
         OnModelCreatingPartial(modelBuilder);

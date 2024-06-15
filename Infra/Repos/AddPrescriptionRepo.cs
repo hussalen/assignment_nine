@@ -36,7 +36,8 @@ public class AddPrescriptionRepo : IAddPrescriptionRepo
             IdPatient = reqPatient.IdPatient,
             FirstName = reqPatient.FirstName,
             LastName = reqPatient.LastName,
-            Prescriptions = reqPatient.Prescriptions
+            Prescriptions = reqPatient.Prescriptions,
+            BirthDate = reqPatient.BirthDate
         };
 
         _hospitalDbContext.Patients.Add(patient);
